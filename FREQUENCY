@@ -1,0 +1,12 @@
+s = input()  
+f = {}  
+for char in s:
+    f[char] = f.get(char, 0) + 1
+max_freq = max(f.values())
+min_freq = min(f.values())
+highest_freq = sorted([char for char, count in f.items() if count == max_freq])
+
+lowest_freq = sorted([char for char, count in f.items() if count == min_freq])
+
+print("Highest frequency character(s):", ' '.join(highest_freq), max_freq)
+print("Lowest frequency character(s):", ' '.join(lowest_freq), min_freq)

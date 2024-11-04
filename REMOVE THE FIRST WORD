@@ -1,0 +1,14 @@
+s = input()
+w = input()
+index = s.find(w)
+if index != -1:
+    m = s[:index] + s[index + len(w):]
+else:
+    m = s
+if m:
+    while m and m[0] == ' ':
+        m = m[1:]
+    while m and m[-1] == ' ':
+        m = m[:-1]
+
+print(m)  

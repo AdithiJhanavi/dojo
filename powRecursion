@@ -1,0 +1,11 @@
+x = float(input())
+n = int(input())
+result = 1.0
+if n >= 0:
+    for _ in range(n):
+        result *= x
+else:
+    for _ in range(-n):
+        result *= x
+    result = 1 / result
+print(f"{result:.2f}")

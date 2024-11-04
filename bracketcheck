@@ -1,0 +1,15 @@
+stack = []
+brackets = {')': '(', '}': '{', ']': '['}
+s = input("Enter a string of brackets: ")
+
+for char in s:
+    if char in brackets:
+        if stack and stack[-1] == brackets[char]:
+            stack.pop()
+        else:
+            stack.append(char)
+            break
+    else:
+        stack.append(char)
+
+print(not stack)
